@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const FILE_TITLE = By.xpath('//*[@id="onboardingCardFiles"]/div[2]/h1');
 const NOTHANKS_BUTTON = By.xpath('//*[@id="onboardingCardFiles"]/div[2]/div[2]/button[2]');
