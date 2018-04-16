@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const JOIN_BUTTON = By.xpath('//*[@id="join-hive"]');
 const TITLE = By.xpath('/html/head/title');
@@ -11,7 +11,7 @@ export default class HomePage extends BasePage {
     }
 
     async getTitle () {
-        return this.getText(TITLE)
+        return this.getText(TITLE);
     }
 
     async join () {
