@@ -10,7 +10,7 @@ import InviteFriendPage from "../src/pageobjects/inviteFriendPage";
 import ConnectFilePage from "../src/pageobjects/connectFilePage";
 import WelcomePage from "../src/pageobjects/welcomePage";
 
-describe('Begin Tests', function () {
+describe ('Begin Tests', function () {
     let driverBuilder;
     let driver;
 
