@@ -1,14 +1,14 @@
-import until from 'selenium-webdriver'
+import {until} from 'selenium-webdriver'
 
 async function waitForLocated (driver: WebDriverClass, locator: WebDriverLocator, retries?: number = 3): Promise<void> {
     try {
-        await driver.wait(until.elementLocated(locator), 7000)
+        await driver.wait(until.elementLocated(locator), 7000);
     } catch (err) {
         if (retries === 0) {
-            throw new Error(`Error message: ${err.message.toString()}`)
+            throw new Error('Error message: ${err.message.toString()}');
         }
         await driver.sleep(250);
-        return waitForLocated(driver, locator, retries - 1)
+        return waitForLocated(driver, locator, retries - 1);
     }
 }
 
@@ -18,10 +18,10 @@ async function waitForVisible (driver: WebDriverClass, locator: WebDriverLocator
         await driver.wait(until.elementIsVisible(element), 7000)
     } catch (err) {
         if (retries === 0) {
-            throw new Error(`Error message: ${err.message.toString()}`)
+            throw new Error('Error message: ${err.message.toString()}');
         }
         await driver.sleep(250);
-        return waitForVisible(driver, locator, retries - 1)
+        return waitForVisible(driver, locator, retries - 1);
     }
 }
 
@@ -29,13 +29,13 @@ export default class BasePage {
     driver: WebDriverClass;
 
     constructor (webdriver: WebDriverClass) {
-        this.driver = webdriver
+        this.driver = webdriver;
     }
 
     async waitForDisplayed (locator: WebDriverLocator, retries?: number = 3): Promise<WebDriverElement> {
         await waitForLocated(this.driver, locator, retries);
         await waitForVisible(this.driver, locator, retries);
-        return this.driver.findElement(locator)
+        return this.driver.findElement(locator);
     }
 
     async sendKeys (locator: WebDriverLocator, keys: string, retries?: number = 1): Promise<void> {
@@ -46,10 +46,10 @@ export default class BasePage {
             await element.sendKeys(keys);
         } catch (err) {
             if (retries === 0) {
-                throw new Error(`Error message: ${err.message}`)
+                throw new Error('Error message: ${err.message}');
             }
             await this.driver.sleep(250);
-            return this.sendKeys(locator, keys, retries - 1)
+            return this.sendKeys(locator, keys, retries - 1);
         }
     }
 
@@ -60,10 +60,10 @@ export default class BasePage {
             return text
         } catch (err) {
             if (retries === 0) {
-                throw new Error(`Error message: ${err.message}`)
+                throw new Error('Error message: ${err.message}');
             }
             await this.driver.sleep(250);
-            return this.getText(locator, retries - 1)
+            return this.getText(locator, retries - 1);
         }
     }
 
@@ -73,10 +73,10 @@ export default class BasePage {
             await element.click();
         } catch (err) {
             if (retries === 0) {
-                throw new Error(`Error message: ${err.message.toString()}`)
+                throw new Error('Error message: ${err.message.toString()}');
             }
             await this.driver.sleep(250);
-            return this.click(locator, retries - 1)
+            return this.click(locator, retries - 1);
         }
     }
 
