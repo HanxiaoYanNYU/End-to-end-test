@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const INFO_TITLE = By.xpath('//*[@id="onboardingCardInfo"]/div[2]/h1');
 const FIRSTNAME = By.xpath('//*[@id="firstName"]');
@@ -18,11 +18,10 @@ export default class InformationPage extends BasePage {
         await this.waitForDisplayed(PHONE);
         await this.waitForDisplayed(EMAIL);
         await this.waitForDisplayed(PASSWORD);
-        //await this.waitForDisplayed(CONTINUE_BUTTON);
     }
 
     async getTitle () {
-        return this.getText(INFO_TITLE)
+        return this.getText(INFO_TITLE);
     }
 
     async fillOutInformation (fname:String, lname:String, phone:String, email:String, password: String) {
