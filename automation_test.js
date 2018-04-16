@@ -17,7 +17,7 @@ describe('Begin Tests', function () {
     beforeEach(async function() {
         driverBuilder = new DriverBuilder();
         driver = driverBuilder.driver;
-        await driverutils.goToPage(driver, 'https://app.hive.com/signin')
+        await driverutils.goToPage(driver, 'https://app.hive.com/signin');
     });
 
     it('Loads the home page', async function () {
