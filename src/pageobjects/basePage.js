@@ -1,4 +1,4 @@
-import until from 'selenium-webdriver'
+import until from 'selenium-webdriver';
 
 async function waitForLocated (driver: WebDriverClass, locator: WebDriverLocator, retries?: number = 3): Promise<void> {
     try {
