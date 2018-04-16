@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const TODO_TITLE = By.xpath('//*[@id="onboardingCardActions"]/div[2]/h1');
 const TODO1 = By.xpath('//*[@id="onboardingCardActionsForm"]/div[1]/label[1]/input');
