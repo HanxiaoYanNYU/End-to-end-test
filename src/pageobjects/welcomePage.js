@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const TIP_TITLE = By.xpath('//*[@id="welcomeModal"]/div/div/div[2]');
 
