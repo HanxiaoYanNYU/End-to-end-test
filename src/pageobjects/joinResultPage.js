@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const JOIN_TITLE = By.xpath('//*[@id="onboardingCardVideo"]/div/h1');
 const CONTINUE_BUTTON = By.xpath('//*[@id="onboardingCardVideo"]/div/div[2]/button');
@@ -12,7 +12,7 @@ export default class JoinResultsPage extends BasePage {
     }
 
     async getTitle () {
-        return this.getText(JOIN_TITLE)
+        return this.getText(JOIN_TITLE);
     }
 
     async clickContinue () {
