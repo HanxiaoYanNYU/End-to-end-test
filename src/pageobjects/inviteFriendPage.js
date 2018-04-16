@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const INVITE_TITLE = By.xpath('//*[@id="onboardingCardTeammates"]/div[2]/h1');
 const EMAIL1 = By.xpath('//*[@id="onboardingCardTeammatesForm"]/div[1]/input');
