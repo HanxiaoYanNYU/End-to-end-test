@@ -1,5 +1,5 @@
-import By from 'selenium-webdriver'
-import BasePage from './BasePage'
+import By from 'selenium-webdriver';
+import BasePage from './BasePage';
 
 const WORK_TITLE = By.xpath('//*[@id="onboardingCardCreateWorkspace"]/div[2]/h1');
 const ORGANIZATION = By.xpath('//*[@id="onboardingCardCreateWorkspaceForm"]/div[1]/label/input');
@@ -12,7 +12,7 @@ export default class WorkspacePage extends BasePage {
     }
 
     async getTitle () {
-        return this.getText(WORK_TITLE)
+        return this.getText(WORK_TITLE);
     }
 
     async nameOrganization (organization: String) {
